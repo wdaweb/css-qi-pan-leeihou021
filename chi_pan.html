@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{margin: 0;
+  padding: 0%;
+  list-style: none;
+  box-sizing: border-box;
+  }
+
+  body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #container{
+    width: 800px;
+    height: 880px;
+    display: flex;
+    flex-wrap:wrap;
+    border: 1px solid black;
+    align-content: center;
+    justify-content: center;
+    padding: 79px;
+    position: relative;
+    box-shadow: 0 0 20px black;
+  }
+
+  .box{
+    border: 1px solid black;
+    margin:0;
+    align-self:center;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+  }
+
+  #block{
+    width: 640px;
+    height: 80px;
+    position: relative;
+    display:flex;
+    justify-content: space-around;
+    font-size: 3rem;
+    align-items: center;
+    font-weight: bolder;
+  }
+
+  block::before{
+    content:"楚河";
+}
+  block::after{
+    content:"漢界";
+  }
+
+  #chess{
+    width: 720px;
+    height: 800px;
+    position: absolute;
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+
+  .chessX{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color:white;
+    border:1px solid black;
+    margin: 5px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 2.5rem;
+    box-shadow: 5px 5px 5px black;
+    text-shadow:  0 0 1px black;
+    position: relative;
+    filter: drop-shadow(0 0 2px white);
+  }
+
+  .line{
+    display: flex;
+  }
+
+  #chess :nth-child(2),
+  #chess :nth-child(4){
+    justify-content: space-between;
+  }
+
+  #chess :nth-child(2)~.line{
+    color:red;
+  }
+
+  .bo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background:white;
+  text-align: center;
+  line-height: 70px;
+  font-size: 2.5rem;
+  color: black;
+  position: relative;
+  box-shadow: 5px 5px 5px black;
+  border: 1px solid black;
+  text-shadow:  0 0 1px black;
+    }
+  .black_bo {
+    position: absolute;
+    left:12%;
+    top: 20%;
+    width: 550px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    }
+
+
+  .puo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background:white;
+  text-align: center;
+  line-height: 70px;
+  font-size: 2.5rem;
+  color: red;
+  position: relative;
+  box-shadow: 5px 5px 5px black;
+  border: 1px solid black;
+  text-shadow:  0 0 1px black;
+    }
+  .red_puo {
+    position: absolute;
+    left:12%;
+    top: 70.3%;
+    width: 550px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+        }
+  .rotate{
+    background: linear-gradient(45deg, transparent 49%, black 49%, black 51%, transparent 51%);
+  }
+
+  .-rotate{
+    background: linear-gradient(-45deg, transparent 49%, black 49%, black 51%, transparent 51%);
+  }
+</style>
+<body>
+  <div id="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box  rotate"></div>
+    <div class="box -rotate"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box -rotate"></div>
+    <div class="box  rotate"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box" id="block"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box  rotate"></div>
+    <div class="box -rotate"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box -rotate"></div>
+    <div class="box  rotate"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+
+  <div id="chess">
+    <div class="line">
+      <div class="chessX">車</div>
+      <div class="chessX">馬</div>
+      <div class="chessX">象</div>
+      <div class="chessX">士</div>
+      <div class="chessX">將</div>
+      <div class="chessX">士</div>
+      <div class="chessX">象</div>
+      <div class="chessX">馬</div>
+      <div class="chessX">車</div>
+    </div>
+ 
+    <div class="line">
+      <div class="chessX">卒</div>
+      <div class="chessX black">卒</div>
+      <div class="chessX">卒</div>
+      <div class="chessX black">卒</div>
+      <div class="chessX">卒</div>
+    </div> 
+      <div class="black_bo">
+      <div class="bo">包</div>
+      <div class="bo">包</div>
+    </div>
+<div class="line">
+  <div class="chessX">兵</div>
+  <div class="chessX red">兵</div>
+  <div class="chessX">兵</div>
+  <div class="chessX red">兵</div>
+  <div class="chessX">兵</div>
+</div>
+<div class="red_puo">
+  <div class="puo">炮</div>
+  <div class="puo">炮</div>
+</div>
+  <div class="line">
+    <div class="chessX">俥</div>
+    <div class="chessX">傌</div>
+    <div class="chessX">像</div>
+    <div class="chessX">仕</div>
+    <div class="chessX">帥</div>
+    <div class="chessX">仕</div>
+    <div class="chessX">像</div>
+    <div class="chessX">傌</div>
+    <div class="chessX">俥</div>
+  </div>
+</div>
+</body>
+</html>
